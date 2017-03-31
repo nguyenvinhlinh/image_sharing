@@ -1,0 +1,22 @@
+<section class="banner">
+  <div class="wrap">
+    <h1>Welcome to HexaLink - Image Sharing!</h1>
+    <p>
+      Hello folks, This website is a small web application which helps you to share your images
+      easily and quickly. Those uploading images might be stored on the system util my server
+      storage getting full. If the server's full, images will be removed to save space.
+    </p>
+    <p>
+      I do not take any responsibility of contents you are uploading. Please be consider when you upload.
+    </p>
+    <p>
+      This server does not have advertisement and it is free 100%. If you want to donate some bucks, you are welcome.
+    </p>
+    <p class="alert">
+      One more time, BE AWARE OF YOUR IMAGES!!!!
+    </p>
+
+    <a href="<%= image_path(@conn, :random_image) %>" class="button">Random Image</a>
+    <a href="<%= image_path(@conn, :new) %>" class="button">Upload a new Image</a>
+  </div>
+</section>

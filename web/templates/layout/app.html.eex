@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small application to upload images">
+    <meta name="author" content="Nguyen Vinh Linh">
+    <title>HexaLink - Image Sharing</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/vendor.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">
+            <a href="/" class="home-url">HexaLink - Image Sharing</a>
+          </li>
+          <li><a href="<%= image_path(@conn, :random_image) %>">Random Image</a></li>
+          <li><a href="<%= image_path(@conn, :new) %>" >Upload New Image</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <%= render(@view_module, @view_template, assigns) %>
+  </body>
+</html>
+

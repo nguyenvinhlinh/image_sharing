@@ -1,0 +1,9 @@
+<section class="image-upload">
+  <div class="wrap">
+    <h1>Upload a new image</h1>
+    <%= form_for @conn, image_path(@conn, :create),[{:as, :upload_image}, {:multipart,  true}], fn f -> %>
+    <%= file_input(f, :image_data ) %>
+    <%= submit "Upload", class: "button" %>
+    <% end %>
+  </div>
+</section>
