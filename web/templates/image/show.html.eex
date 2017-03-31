@@ -1,14 +1,14 @@
 <section class="image-displayer">
   <div class="image-container">
-    <img src="<%= get_relative_url(@image) %>" />
+    <img src="<%= get_image_relative_url(@image) %>" />
   </div>
   <div class="image-information">
     <p>
       Uploaded at: <%= @image.inserted_at %><br/>
-      Image source url: <a href="<%= get_absolute_url(@image) %>"><%= get_absolute_url(@image) %></a><br/>
+      Image source url: <a href="<%= get_image_absolute_url(@image) %>"><%= get_image_absolute_url(@image) %></a><br/>
       Page url: <a href="<%= image_url(@conn, :show, @image) %>"><%= image_url(@conn, :show, @image) %></a><br/>
-      <button class="button">Copy Image Souce URL</button>
-      <button class="button">Copy Page URL</button>
+      <button class="button" for="copy-clipboard" data-clipboard-text="<%= get_image_absolute_url(@image) %>">Copy Image Souce URL</button>
+      <button class="button" for="copy-clipboard" data-clipboard-text="<%= image_url(@conn, :show, @image) %>">Copy Page URL</button>
     </p>
   </div>
 </section>
