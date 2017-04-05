@@ -4,7 +4,7 @@ defmodule ImageSharing.Mixfile do
   def project do
     [app: :image_sharing,
      version: "0.0.1",
-     elixir: "1.4.1",
+     elixir: "1.4.0",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -37,7 +37,8 @@ defmodule ImageSharing.Mixfile do
      {:phoenix_html, "2.9.3"},
      {:phoenix_live_reload, "1.0.8", only: :dev},
      {:gettext, "0.13.1"},
-     {:cowboy, "1.1.2"}]
+     {:cowboy, "1.1.2"},
+     {:exrm, "1.0.8"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
