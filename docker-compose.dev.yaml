@@ -1,7 +1,7 @@
 version: '2'
 services:
   hexalink_image_sharing:
-    image: 'image_sharing:0.0.1'
+    build: .
     container_name: "hexalink_image_sharing"
     ports:
       - "4000:4000"
