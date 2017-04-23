@@ -55,7 +55,11 @@ defmodule ImageSharing.ImageController do
   def get_upload_file(conn, %{"file_name" => file_name}) do
     upload_store_path = Application.get_env(:image_sharing, :file_store_path)
     absolute_upload_file_path = Path.join([upload_store_path, file_name])
+    content_type = conn.path_info
+    |> List.last
+    |> MIME.from_path
     conn
+    |> Plug.Conn.put_resp_header("content-type", content_type)
     |> Plug.Conn.send_file(200, absolute_upload_file_path)
     |> halt
   end

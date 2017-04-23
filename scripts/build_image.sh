@@ -1,1 +1,1 @@
-docker build -t image_sharing:0.0.1 .
+docker build -t image_sharing:0.0.2 .
