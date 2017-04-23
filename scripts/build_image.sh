@@ -1,1 +1,1 @@
-docker build -t image_sharing:latest .
+docker build -t image_sharing:0.0.1 .

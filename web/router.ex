@@ -9,11 +9,11 @@ defmodule ImageSharing.Router do
     plug :put_secure_browser_headers
   end
 
-
   scope "/", ImageSharing do
     pipe_through :browser
     get "/", PageController, :index
     get "/images/random", ImageController, :random_image
     resources "/images", ImageController, except: [:edit, :update, :delete]
+    get "/uploads/:file_name", ImageController, :get_upload_file
   end
 end

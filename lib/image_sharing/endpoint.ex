@@ -7,14 +7,11 @@ defmodule ImageSharing.Endpoint do
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
+
   plug Plug.Static,
     at: "/", from: :image_sharing, gzip: false,
     only: ~w(css js image)
 
-  plug Plug.Static,
-    at: "/uploads",
-    from: Application.get_env(:image_sharing, :file_store_path)
-  
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do

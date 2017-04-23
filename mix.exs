@@ -38,7 +38,7 @@ defmodule ImageSharing.Mixfile do
      {:phoenix_live_reload, "1.0.8", only: :dev},
      {:gettext, "0.13.1"},
      {:cowboy, "1.1.2"},
-     {:exrm, "1.0.8"}]
+     {:distillery, "1.3.5"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
