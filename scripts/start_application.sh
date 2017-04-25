@@ -23,7 +23,7 @@
 # export DATABASE_USERNAME=nguyenvinhlinh
 # export DATABASE_PASSWORD=nguyenvinhlinh
 # export REPLACE_OS_VARS=true
-#sleep 10;
+sleep 10;
 mix ecto.create;
 mix ecto.migrate;
 mkdir $APP_FILE_STORE_PATH;
