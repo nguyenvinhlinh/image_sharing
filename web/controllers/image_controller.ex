@@ -58,8 +58,13 @@ defmodule ImageSharing.ImageController do
     content_type = conn.path_info
     |> List.last
     |> MIME.from_path
+
     conn
     |> Plug.Conn.put_resp_header("content-type", content_type)
+    |> Plug.Conn.put_resp_header("cache-control", "public")
+    |> Plug.Conn.delete_resp_header("x-frame-options")
+    |> Plug.Conn.delete_resp_header("x-xss-protection")
+    |> Plug.Conn.delete_resp_header("x-content-type-options")
     |> Plug.Conn.send_file(200, absolute_upload_file_path)
     |> halt
   end

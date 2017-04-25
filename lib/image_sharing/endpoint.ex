@@ -10,7 +10,7 @@ defmodule ImageSharing.Endpoint do
 
   plug Plug.Static,
     at: "/", from: :image_sharing, gzip: false,
-    only: ~w(css js image)
+    only: ~w(css js image favicon.ico)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
