@@ -1,4 +1,4 @@
-FROM fedora-elixir:1.4.0
+FROM nguyenvinhlinh/fedora-elixir:1.4.0
 ENV MIX_ENV=prod
 
 COPY ./mix.exs /image_sharing/mix.exs
