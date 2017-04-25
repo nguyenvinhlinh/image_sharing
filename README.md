@@ -1,4 +1,7 @@
 # ImageSharing
+## To developing
+### Clone and configure dev.exs from `dev.exs.sample`  
+### Start dev server with command: mix phoenix.server
 ## To deploy your server
 ### List of system variables and definition:
   * APP_PORT: the port that application is running
