@@ -1,5 +1,5 @@
 # this is a script to run application as a support to run docker container.
-# Here are a list of system environment has been given and export before running this script
+# Here are a list of system environment variables which must be given and export before running this script
 #      - MIX_ENV=prod
 #      - APP_PORT=4000
 #      - APP_DOMAIN_NAME=image.hexalink.xyz
