@@ -1,5 +1,5 @@
 # ImageSharing
-## To developing
+## To develop
   * Clone and configure dev.exs from `dev.exs.sample`  
   * Start dev server with command: `mix phoenix.server`  
 ## To deploy your server
