@@ -19,5 +19,5 @@ RUN mix phoenix.digest
 RUN mix release.init
 RUN mix release  --env=prod
 
-CMD bash /image_sharing/scripts/start_application.sh
+CMD bash /image_sharing/scripts/start_application_via_release.sh
 expose 4000
