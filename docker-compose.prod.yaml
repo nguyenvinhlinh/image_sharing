@@ -1,7 +1,7 @@
 version: '2'
 services:
   hexalink_image_sharing:
-    build: .
+    image: "nguyenvinhlinh/image_sharing:0.0.3"
     container_name: "hexalink_image_sharing"
     ports:
       - "4000:4000"
@@ -10,14 +10,14 @@ services:
       - APP_PORT=4000
       - APP_DOMAIN_NAME=image.hexalink.xyz
       - APP_ROOT_URL=http://image.hexalink.xyz:4000
-      - APP_FILE_STORE_PATH=/tmp
+      - APP_FILE_STORE_PATH=/image_sharing/uploads
       - DATABASE_HOSTNAME=hexalink_postgres_database
       - DATABASE_PORT=5432
       - DATABASE_NAME=image_sharing_db
       - DATABASE_USERNAME=nguyenvinhlinh
       - DATABASE_PASSWORD=nguyenvinhlinh
       - REPLACE_OS_VARS=true
-
+    volumes: /hexalink_image_sharing/data/uploads:/image_sharing/uploads
   hexalink_postgres_database:
     container_name: "hexalink_postgres_database"
     image: 'postgres:latest'
@@ -27,6 +27,6 @@ services:
       - POSTGRES_USER=nguyenvinhlinh
       - POSTGRES_PASSWORD=nguyenvinhlinh
       - POSTGRES_DB=image_sharing_db
-      - PGDATA=/postgres_database/pgdata
+      - PGDATA=/postgres_data
     volumes:
-      - /home/nguyenvinhlinh/Templates/dump_psql:/postgres_database/pgdata
+      - /hexalink_image_sharing/data/postgres_data:/image_sharing/postgres_data

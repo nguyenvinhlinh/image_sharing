@@ -16,8 +16,6 @@ WORKDIR /image_sharing
 RUN node_modules/.bin/brunch build --production
 RUN mix compile
 RUN mix phoenix.digest
-RUN mix release.init
-RUN mix release  --env=prod
 
-CMD bash /image_sharing/scripts/start_application_via_release.sh
+CMD bash ./scripts/docker_start_application.sh
 expose 4000
