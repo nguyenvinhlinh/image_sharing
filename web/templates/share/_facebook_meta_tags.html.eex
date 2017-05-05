@@ -2,3 +2,4 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Hexalink - Image sharing - Photo Clipboard">
 <meta property="fb:app_id" content="<%= Application.get_env(:image_sharing, :facebook_app_id) %>"/>
+<meta property="og:description" content="The fastest way to share your images"/>

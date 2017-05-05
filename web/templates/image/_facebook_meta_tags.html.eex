@@ -1,6 +1,6 @@
 <meta property="og:url" content="<%= image_url(@conn, :show, @image) %>"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Hexalink - Image sharing - Photo Clipboard">
-<meta property="og:image" content="<%= get_image_absolute_url(@image) %>"/>
+<meta property="og:image" content="<%= get_image_absolute_url(@image) |> URI.encode %>"/>
 <meta property="fb:app_id" content="<%= Application.get_env(:image_sharing, :facebook_app_id) %>"/>
-
+<meta property="og:description" content="The fastest way to share your images"/>
