@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A small application to upload images">
     <meta name="author" content="Nguyen Vinh Linh">
+    <%= render_existing(@view_module, "facebook-meta-tags", assigns) %>
     <title>HexaLink - Image Sharing</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/vendor.css") %>">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
