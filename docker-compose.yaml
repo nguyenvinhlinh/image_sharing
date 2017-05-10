@@ -17,7 +17,7 @@ services:
       - DATABASE_USERNAME=nguyenvinhlinh
       - DATABASE_PASSWORD=nguyenvinhlinh
       - REPLACE_OS_VARS=true
-
+      - FACEBOOK_APP_ID='1372612886139574'
   hexalink_postgres_database:
     container_name: "hexalink_postgres_database"
     image: 'postgres:latest'

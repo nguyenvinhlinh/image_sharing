@@ -3,7 +3,7 @@ defmodule ImageSharing.Mixfile do
 
   def project do
     [app: :image_sharing,
-     version: "0.0.4",
+     version: "0.0.5",
      elixir: "1.4.0",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,

@@ -33,15 +33,15 @@ defmodule ImageSharing.ImageController do
   end
   
   def create(conn, %{"upload_image" => image_data}) do
-    %{"image_data" => %Plug.Upload{content_type: content_type, filename: filename, path: tmp_path}} = image_data
-    filename = ImageSharing.Utilities.generate_string <> filename
+    %{"image_data" => %Plug.Upload{content_type: _content_type, filename: filename, path: tmp_path}} = image_data
+    filename = Utilities.generate_string <> filename
     save_location = Application.get_env(:image_sharing, :file_store_path)
     File.copy!(tmp_path, save_location <> "/" <> filename)
     image_changeset = Image.create_changeset(%Image{}, %{filename: filename})
     case Repo.insert(image_changeset) do
       {:ok, image} ->
         redirect(conn, to: image_path(conn, :show, image))
-      {:error, changeset} ->
+      {:error, _changeset} ->
         redirect(conn, to: image_path(conn, :new))
     end
   end

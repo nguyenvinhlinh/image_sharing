@@ -3,7 +3,7 @@ defmodule ImageSharing.Model.Image do
 
   schema "images" do
     field :filename, :string
-    timestamps
+    timestamps()
   end
 
   @required_fields ~w(filename)
